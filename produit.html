@@ -15,20 +15,24 @@
 <body>
     <header>
         <a href="index.html">
-        <img class="logo" src="Images/logo.jpg" alt="logo entreprise Orinoco" title="logo">
+            <img class="logo" src="Images/logo.jpg" alt="logo entreprise Orinoco" title="logo">
         </a>
-
+        
         <a href="panier.html">
             <i id="panier" class="fas fa-shopping-cart"></i>
         </a>
     </header>
-
+    
     <h1> Faites votre choix !</h1>
-
-    <div id="produits_list"></div>
-    <div id="form_list"></div>
-
-<script src="JS/produit.js"></script>
-<script src="JS/methode.js"></script>
+    <div id="container">
+        <div id="produit_infos"></div>
+        <div class="select">
+        <select name="lentille_select" id="choix_lentilles">Choissisez votre lentille :</select>
+        <button id="addcart" type="button"> Ajouter au panier </button>
+        </div>
+    </div>
+    
+    <script src="JS/requests.js"></script>
+    <script src="JS/produit.js"></script>
 </body>
 </html>
