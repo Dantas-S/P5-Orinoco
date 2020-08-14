@@ -1,14 +1,14 @@
-// Création de la constante pour récuperer les cameras sur le fichier Json du serveur
+/* ---------- Création - HTML ---------- */
 
 const camerasList = document.getElementById('cameras_list');
 
-// Connection avec les caméras sur le serveur
+/* ---------- Appel au server ---------- */
 
 requests('http://localhost:3000/api/cameras/').then(cameras => {
     console.log('Tout fonctionne !');
     cameras.forEach(camera => {
-        console.log(camera);
-        // Mise en place de l'HTML
+
+        /* ---------- HTML ---------- */
 
         camerasList.innerHTML += `<div class="products">
                                     <a href="produit.html?id=${camera._id}">
@@ -23,6 +23,11 @@ requests('http://localhost:3000/api/cameras/').then(cameras => {
                                     </a>
                                 </div>`
     })
-}).catch(function (error) {
+
+/* ---------- Fonction en cas de problèmes ---------- */
+
+})
+.catch(function (error) {
     console.log('Erreur repérée ' + error);
+    alert ("Une erreur s'est produit. Veuillez réessayer ultérieurement.")
 })

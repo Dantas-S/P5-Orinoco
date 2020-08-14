@@ -16,9 +16,13 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #f3e9f1;
     padding: 2% 2%;
+    background-image: url('/Images/camera-vintage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    position: relative;
 }
 
 #panier {
